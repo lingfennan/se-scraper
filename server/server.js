@@ -33,11 +33,13 @@ let browser_config = {
     headless : true,
     debug_level: 1,
     sleep_range: '',
+    proxy_file: '/home/se-scraper/.proxies', // one proxy per line
+    log_ip_address: true,
     puppeteer_cluster_config: {
         timeout: 30 * 60 * 1000, // max timeout set to 30 minutes
         monitor: false,
-        concurrency: 1, // one scraper per tab
-        maxConcurrency: 1, // scrape with 5 tabs
+        concurrency: 3, // one scraper per tab
+        maxConcurrency: 3, // scrape with 5 tabs
     }
 };
 
